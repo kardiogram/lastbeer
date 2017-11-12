@@ -23,6 +23,10 @@
 #define BACKDELAY		502
 #define TITLEDELAY		460
 
+#ifdef linux
+#define O_BINARY    0
+#endif
+
 #include "xmode.h"
 #include "sound.h"
 #include "fileman.h"
