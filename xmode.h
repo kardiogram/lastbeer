@@ -118,7 +118,12 @@ struct starstrc {
 
 void create_sprstrc (struct sprstrc **, unsigned char *);
 
+//TODO this down here is straitforward workaround, because linux does not have inportb (it's DOS stuff, afaik)
+#ifdef _WIN32
 #define retrace() {while(inportb(0x3da)&8); while(!(inportb(0x3da)&8));}
+#elif defined linux
+#define retrace() {}
+#endif
 
 #define FLASH_COLOUR 230
 
