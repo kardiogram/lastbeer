@@ -5,6 +5,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <stdint.h>
 
 #define	MAXENTRIES	8
 #define	NOCP		15	// Number of Chars playername
@@ -19,7 +20,7 @@
 #include "baller.h"
 
 struct playerdatas{
-   long score;
+   /*long*/int32_t score;
    char name[NOCP+1];
 };
 
