@@ -1,0 +1,8 @@
+Makefile.in
+*.o
+Makefile
+.deps/
+autom4te.cache/
+config.log
+config.status
+aclocal.m4
